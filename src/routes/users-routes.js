@@ -8,10 +8,4 @@ export default {
     preHandler: [validateRequest],
     handler: UserController.index,
   },
-
-  Postusers:{
-    method: 'Post',
-    url: '/cadastro',
-    handler: UserController.create
-  }
 };

@@ -12,23 +12,3 @@ export const index = async (req, res) => {
   }
 };
 
-export const create = async (req, res) => {
-  const {name,email,username,password,profile_id} = req.body;
-  try {
-    const user = await prisma.user.create({
-      data:{
-        name,
-        email,
-        username,
-        password,
-        profile:{
-          connect:{ id:+ profile_id}
-        },
-      },
-    })
-    return res.send({ data: { user } });
-  } catch (error) {
-    console.error("user", error);
-    res.status(500).send({ error: `Não foi possivel fazer seu cadastro` });
-  }
-};

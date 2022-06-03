@@ -8,4 +8,18 @@ export default {
     preHandler: [validateRequest],
     handler: UserController.index,
   },
+
+  // getAllUsers: {
+  //   method: "PUT",
+  //   url: "/users/:id",
+  //   preHandler: [validateRequest],
+  //   handler: UserController.update,
+  // },
+  // getAllUsers: {
+  //   method: "DELETE",
+  //   url: "/users/:id",
+  //   preHandler: [validateRequest],
+  //   handler: UserController.deleteuser,
+  // },
+
 };

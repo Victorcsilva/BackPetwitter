@@ -7,7 +7,7 @@ import {
 
 export const signup = async (req, reply) => {
   const { name, email, username, password: pass } = req.body;
-
+console.log (req.body)
   try {
     const password = await hashPassword(pass);
     const { password: hashedPassword, ...user } = await prisma.user.create({
@@ -18,8 +18,8 @@ export const signup = async (req, reply) => {
                password,
       },
     });
-
-    reply.send(user);
+    
+   reply.send(user);
   } catch (error) {
     console.log(error);
     reply.status(400).send({ error: `User already exists!` });

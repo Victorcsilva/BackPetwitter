@@ -9,17 +9,22 @@ export default {
     handler: UserController.index,
   },
 
-  // getAllUsers: {
-  //   method: "PUT",
-  //   url: "/users/:id",
-  //   preHandler: [validateRequest],
-  //   handler: UserController.update,
-  // },
-  // getAllUsers: {
-  //   method: "DELETE",
-  //   url: "/users/:id",
-  //   preHandler: [validateRequest],
-  //   handler: UserController.deleteuser,
-  // },
-
+  Putusers: {
+    method: "PUT",
+    url: "/users/:id",
+    preHandler: [validateRequest],
+    handler: UserController.update,
+  },
+  Patchusers: {
+    method: "PATCH",
+    url: "/users/:id",
+    preHandler: [validateRequest],
+    handler: UserController.updatesingle,
+  },
+  Deleteusers: {
+    method: "DELETE",
+    url: "/users/:id",
+    preHandler: [validateRequest],
+    handler: UserController.Delete,
+  },
 };

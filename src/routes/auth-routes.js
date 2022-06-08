@@ -10,6 +10,10 @@ export default {
     method: "POST",
     url: "/login",
     handler: AuthController.login,
-  }
-
+  },
+  posts: {
+    method: "POST",
+    url: "/posts",
+    handler: AuthController.posts,
+  },
 };

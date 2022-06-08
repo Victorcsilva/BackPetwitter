@@ -6,23 +6,21 @@ export const index = async (req, res) => {
     return res.send({ data: { posts } });
   } catch (error) {
     console.error("posts", error);
-    res.status(500).send({ error: `Cannot fetch posts` });
+    res.status(500).send({ error: `Ops tivemos um problema no servidor...` });
   }
 };
 
 export const update = async (req, reply) => {
   try {
     const { id } = req.params;
-    const { createdAt, published, author } = req.body;
-    const updateusers = await prisma.posts.update({
+    const { published } = req.body;
+    const updateposts = await prisma.posts.update({
       where: { id: +id },
       data: {
-        createdAt,
         published,
-        author,
       },
     });
-    return reply.status(200).send(updateusers);
+    return reply.status(200).send(updateposts);
   } catch (error) {
     reply.status(500).send({ error: "Erro no servidor" });
   }
@@ -46,7 +44,7 @@ export const updatesingle = async (req, reply) => {
   console.log(req.body);
 
   if (req.body.published) {
-    data.year = req.body.published;
+    data.published = req.body.published;
   }
 
   try {

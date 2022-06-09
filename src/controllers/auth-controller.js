@@ -49,17 +49,3 @@ export const login = async (req, reply) => {
     reply.status(500).send({ error: "Server error!" });
   }
 };
-
-export const posts = async (req, reply) => {
-  const { published } = req.body;
-  try {
-    const posts = await prisma.posts.create({
-      data: {
-        published,
-      },
-    });
-    reply.status(201).send(posts);
-  } catch (error) {
-    reply.status(500).send("Não foi possível criar o seu posts");
-  }
-};

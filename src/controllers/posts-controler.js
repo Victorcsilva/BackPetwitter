@@ -1,5 +1,25 @@
 import { prisma } from "../helpers/utils.js";
 
+export const createposts = async (req, reply) => {
+  const { content } = req.body;
+  const { id } = req.user;
+  console.log(content);
+  console.log(id);
+  try {
+    const posts = await prisma.posts.create({
+      data: {
+        content,
+        author: {
+          connect: { id: Number(id) },
+        },
+      },
+    });
+    console.log(posts);
+    return reply.send(posts);
+  } catch (error) {
+    reply.status(500).send("Não foi possível criar o seu posts");
+  }
+};
 export const index = async (req, res) => {
   try {
     let posts = await prisma.posts.findMany({});
@@ -13,11 +33,11 @@ export const index = async (req, res) => {
 export const update = async (req, reply) => {
   try {
     const { id } = req.params;
-    const { published } = req.body;
+    const { content } = req.body;
     const updateposts = await prisma.posts.update({
       where: { id: +id },
       data: {
-        published,
+        content,
       },
     });
     return reply.status(200).send(updateposts);
@@ -43,8 +63,8 @@ export const updatesingle = async (req, reply) => {
   let data = {};
   console.log(req.body);
 
-  if (req.body.published) {
-    data.published = req.body.published;
+  if (req.body.content) {
+    data.content = req.body.content;
   }
 
   try {

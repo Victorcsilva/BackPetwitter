@@ -2,29 +2,36 @@ import { validateRequest } from "../middleware/auth.js";
 import * as PostsController from "../controllers/posts-controler.js";
 
 export default {
+  createposts: {
+    method: "POST",
+    url: "/posts",
+    preHandler: [validateRequest],
+    handler: PostsController.createposts,
+  },
+
   getAllUsers: {
     method: "GET",
     url: "/posts",
-    //preHandler: [validateRequest],
+    preHandler: [validateRequest],
     handler: PostsController.index,
   },
 
   Putusers: {
     method: "PUT",
     url: "/posts/:id",
-    //  preHandler: [validateRequest],
+    preHandler: [validateRequest],
     handler: PostsController.update,
   },
   Patchusers: {
     method: "PATCH",
     url: "/posts/:id",
-    // preHandler: [validateRequest],
+    preHandler: [validateRequest],
     handler: PostsController.updatesingle,
   },
   Deleteusers: {
     method: "DELETE",
     url: "/posts/:id",
-    // preHandler: [validateRequest],
+    preHandler: [validateRequest],
     handler: PostsController.Delete,
   },
 };

@@ -16,11 +16,11 @@ model User {
   email   String   @unique
   username String   @unique
   password String
-  posts   Post[]
+  posts   Posts[]
   
 }
 
-model Post {
+model Posts {
   id         Int        @id @default(autoincrement())
   createdAt  DateTime   @default(now())
   content    String     @db.VarChar(140)

@@ -22,8 +22,9 @@ export const createposts = async (req, reply) => {
 };
 export const index = async (req, res) => {
   try {
-    let posts = await prisma.posts.findMany({});
-    return res.send({ data: { posts } });
+    let posts = await prisma.posts.findMany();
+    console.log(posts);
+    res.send(posts);
   } catch (error) {
     console.error("posts", error);
     res.status(500).send({ error: `Ops tivemos um problema no servidor...` });

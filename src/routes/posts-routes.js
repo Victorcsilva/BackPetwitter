@@ -12,7 +12,7 @@ export default {
   getAllUsers: {
     method: "GET",
     url: "/posts",
-    preHandler: [validateRequest],
+    //preHandler: [validateRequest],
     handler: PostsController.index,
   },
 

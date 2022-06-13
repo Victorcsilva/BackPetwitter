@@ -11,8 +11,20 @@ datasource db {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
-  name     String? @db.VarChar(255)
-  email    String  @unique @db.VarChar(255)
+  id      Int      @id @default(autoincrement())
+  name    String?
+  email   String   @unique
+  username String   @unique
   password String
+  posts   Posts[]
+  
+}
+
+model Posts {
+  id         Int        @id @default(autoincrement())
+  createdAt  DateTime   @default(now())
+  content    String     @db.VarChar(140)
+  published  Boolean    @default(false)
+  author     User       @relation(fields: [authorId], references: [id])
+  authorId   Int
 }

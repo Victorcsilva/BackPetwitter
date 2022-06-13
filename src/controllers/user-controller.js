@@ -68,3 +68,14 @@ export const updatesingle = async (req, reply) => {
     reply.status(500).send({ error: "Erro no Servidor" });
   }
 };
+
+export const getuser = async (req, reply) => {
+  const { id } = req.params;
+
+  try {
+    const user = await prisma.user.findMany({ where: { id: Number(id) } });
+    return reply.send(user);
+  } catch (error) {
+    reply.status(500).send({ error: "Não foi possivel encontrar o usuario" });
+  }
+};

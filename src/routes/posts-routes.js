@@ -9,26 +9,33 @@ export default {
     handler: PostsController.createposts,
   },
 
-  getAllUsers: {
+  getAllPosts: {
     method: "GET",
     url: "/posts",
-    //preHandler: [validateRequest],
+    preHandler: [validateRequest],
     handler: PostsController.index,
   },
 
-  Putusers: {
+  getAllposts: {
+    method: "GET",
+    url: "/posts/:id",
+    preHandler: [validateRequest],
+    handler: PostsController.FindPosts,
+  },
+
+  PutPosts: {
     method: "PUT",
     url: "/posts/:id",
     preHandler: [validateRequest],
     handler: PostsController.update,
   },
-  Patchusers: {
+  PatchPosts: {
     method: "PATCH",
     url: "/posts/:id",
     preHandler: [validateRequest],
     handler: PostsController.updatesingle,
   },
-  Deleteusers: {
+  DeletePosts: {
     method: "DELETE",
     url: "/posts/:id",
     preHandler: [validateRequest],

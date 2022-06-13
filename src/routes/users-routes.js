@@ -15,6 +15,13 @@ export default {
     preHandler: [validateRequest],
     handler: UserController.update,
   },
+  getUsers: {
+    method: "GET",
+    url: "/users/:id",
+    preHandler: [validateRequest],
+    handler: UserController.getuser,
+  },
+
   Patchusers: {
     method: "PATCH",
     url: "/users/:id",

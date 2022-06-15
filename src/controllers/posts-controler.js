@@ -23,7 +23,7 @@ export const index = async (req, res) => {
   const { take, skip } = req.query;
   let data = { orderBy: { id: "desc" } };
   if (take) data.take = Number(take);
-  if (skip) data.take = Number(skip);
+  if (skip) data.skip = Number(skip);
 
   try {
     let posts = await prisma.posts.findMany(data);

@@ -17,6 +17,8 @@ model User {
   username String   @unique
   password String
   posts   Posts[]
+  // image_url String 
+
   
 }
 

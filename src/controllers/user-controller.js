@@ -16,12 +16,14 @@ export const update = async (req, reply) => {
   try {
     const { id } = req.params;
     const { name, email, username, password: pass } = req.body;
+    // const img = req.file;
     const updateusers = await prisma.users.update({
       where: { id: +id },
       data: {
         name,
         email,
         username,
+        // image_url: img.path,
       },
     });
     return reply.status(200).send(updateusers);
@@ -57,7 +59,12 @@ export const updatesingle = async (req, reply) => {
   if (req.body.username) {
     data.username = req.body.username;
   }
-
+  if (req.body.password) {
+    data.password = req.body.password;
+  }
+  // if (req.file) {
+  //   ata.image_url = req.file.path;
+  // }
   try {
     const updatepatch = await prisma.users.update({
       where: { id: +id },

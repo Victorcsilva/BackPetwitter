@@ -8,6 +8,7 @@ import {
 export const signup = async (req, reply) => {
   const { name, email, username, password: pass } = req.body;
   try {
+    // const img = req.file;
     const password = await hashPassword(pass);
     const { password: hashedPassword, ...user } = await prisma.user.create({
       data: {
@@ -15,6 +16,7 @@ export const signup = async (req, reply) => {
         email,
         username,
         password,
+        // image_url: img.path,
       },
     });
 
@@ -28,9 +30,7 @@ export const signup = async (req, reply) => {
 export const login = async (req, reply) => {
   try {
     const { email, password } = req.body;
-    console.log(req.body);
     let user = await prisma.user.findUnique({ where: { email } });
-    console.log(user);
     if (!user) {
       return reply.status(401).send({ error: "Email ou Senha Inválida" });
     }

@@ -29,7 +29,7 @@ export const index = async (req, res) => {
     let posts = await prisma.posts.findMany(data);
     res.send(posts);
   } catch (error) {
-    console.error("posts", error);
+    console.error(error);
     res.status(500).send({ error: `Ops tivemos um problema no servidor...` });
   }
 };

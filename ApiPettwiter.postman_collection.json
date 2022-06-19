@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "c811323f-8080-4455-90e6-d6eb660a1f68",
+		"name": "ApiPettwiter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19927313"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6bnVsbCwiZW1haWwiOiJ2aWN0b3J0ZXN0ZTJAZ21haWwuY29tIiwiaWF0IjoxNjUzMDkxMjUwfQ.vwaYwLSbn-6KUOHydOKjtHTW1VmJ4q-vYugnG191P-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-test.v2.portalgera.com.br"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJraWQiOiJEb0JyQjQ4VTV0cFR0b2lRTE1Jc2RTZzRNd3FmOG5rR041aldpcHF2UWNjPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MDIyZjI4MC03NjRkLTQzNTItODg0Mi1lOTQ2ZmU4Mzc4OTMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnNhLWVhc3QtMS5hbWF6b25hd3MuY29tXC9zYS1lYXN0LTFfT1huMUNZYlRsIiwiY29nbml0bzp1c2VybmFtZSI6ImRldmVsb3BAcG9ydGFsZ2VyYS5jb20uYnIiLCJvcmlnaW5fanRpIjoiYzM5NjNkODYtMzRiNy00YzA2LWI4Y2ItNmY4OGY0NWE2MzQ5IiwiYXVkIjoiNjYycmdqdTA1bXZmajgwNmFzMmRjaWY4MWIiLCJldmVudF9pZCI6ImJiODFjOWU0LWFhYzAtNDliYi1hZjY5LTE4MWQ2M2FjMzBmOCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjUzOTM3NTU0LCJuYW1lIjoiVGVzdGVzIGVtIERldmVsb3AiLCJleHAiOjE2NTM5NDExNTQsImlhdCI6MTY1MzkzNzU1NCwiZmFtaWx5X25hbWUiOiJzYW50YW5kZXIiLCJqdGkiOiJiNWE5NmJjZS0wNjA5LTQ2NTktOGU1Zi01MmJmMjkzYWM1ODMiLCJlbWFpbCI6ImRldmVsb3BAcG9ydGFsZ2VyYS5jb20uYnIifQ.Az3qJ_B1o9FVtHbBqP0NRfi1_SxQcMl0ehk2A3I9uAzPF9bXE_Ra9RkswP1FtAMSElRX3S7vnzXbQJzAndZe3hOwE9whFLZENvPRsfWgceyyV5ffPWFhakqgzluv_dy1OysrwJdRNGyp30m3a_0Rq_bdPfFFsRuH94GIxPtj6ABHUSnSQGYtyIrX8QohkhPbtx6Uksejqf5H-uF-kBpDLEKB0O6RL0Hw9m1yGgYilV96eP6xV_UdfhgZ3aeKNCodhVJDBE0PJvekaKXYbVoiJud6jPpFst8ibluqdER_Tr5zGZp4o-nXz9rf_Gpz0J-37llPDzZ_xVQ5a8jVHqVTRw"
+							},
+							{
+								"key": "origin",
+								"value": "https://develop.portalgera.com.br"
+							},
+							{
+								"key": "referer",
+								"value": "https://develop.portalgera.com.br/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"email\": \"BANCO3@BANCO.COM.BR\"\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6bnVsbCwiZW1haWwiOiJ2aWN0b3J0ZXN0ZTJAZ21haWwuY29tIiwiaWF0IjoxNjUzMDkxMjUwfQ.vwaYwLSbn-6KUOHydOKjtHTW1VmJ4q-vYugnG191P-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-test.v2.portalgera.com.br"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJraWQiOiJEb0JyQjQ4VTV0cFR0b2lRTE1Jc2RTZzRNd3FmOG5rR041aldpcHF2UWNjPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MDIyZjI4MC03NjRkLTQzNTItODg0Mi1lOTQ2ZmU4Mzc4OTMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnNhLWVhc3QtMS5hbWF6b25hd3MuY29tXC9zYS1lYXN0LTFfT1huMUNZYlRsIiwiY29nbml0bzp1c2VybmFtZSI6ImRldmVsb3BAcG9ydGFsZ2VyYS5jb20uYnIiLCJvcmlnaW5fanRpIjoiYzM5NjNkODYtMzRiNy00YzA2LWI4Y2ItNmY4OGY0NWE2MzQ5IiwiYXVkIjoiNjYycmdqdTA1bXZmajgwNmFzMmRjaWY4MWIiLCJldmVudF9pZCI6ImJiODFjOWU0LWFhYzAtNDliYi1hZjY5LTE4MWQ2M2FjMzBmOCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjUzOTM3NTU0LCJuYW1lIjoiVGVzdGVzIGVtIERldmVsb3AiLCJleHAiOjE2NTM5NDExNTQsImlhdCI6MTY1MzkzNzU1NCwiZmFtaWx5X25hbWUiOiJzYW50YW5kZXIiLCJqdGkiOiJiNWE5NmJjZS0wNjA5LTQ2NTktOGU1Zi01MmJmMjkzYWM1ODMiLCJlbWFpbCI6ImRldmVsb3BAcG9ydGFsZ2VyYS5jb20uYnIifQ.Az3qJ_B1o9FVtHbBqP0NRfi1_SxQcMl0ehk2A3I9uAzPF9bXE_Ra9RkswP1FtAMSElRX3S7vnzXbQJzAndZe3hOwE9whFLZENvPRsfWgceyyV5ffPWFhakqgzluv_dy1OysrwJdRNGyp30m3a_0Rq_bdPfFFsRuH94GIxPtj6ABHUSnSQGYtyIrX8QohkhPbtx6Uksejqf5H-uF-kBpDLEKB0O6RL0Hw9m1yGgYilV96eP6xV_UdfhgZ3aeKNCodhVJDBE0PJvekaKXYbVoiJud6jPpFst8ibluqdER_Tr5zGZp4o-nXz9rf_Gpz0J-37llPDzZ_xVQ5a8jVHqVTRw"
+							},
+							{
+								"key": "origin",
+								"value": "https://develop.portalgera.com.br"
+							},
+							{
+								"key": "referer",
+								"value": "https://develop.portalgera.com.br/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"email\": \"teste@teste.com\",\r\n                \"password\":\"12345\"\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6bnVsbCwiZW1haWwiOiJ2aWN0b3J0ZXN0ZTJAZ21haWwuY29tIiwiaWF0IjoxNjUzMDkxMjUwfQ.vwaYwLSbn-6KUOHydOKjtHTW1VmJ4q-vYugnG191P-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-test.v2.portalgera.com.br"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJraWQiOiJEb0JyQjQ4VTV0cFR0b2lRTE1Jc2RTZzRNd3FmOG5rR041aldpcHF2UWNjPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MDIyZjI4MC03NjRkLTQzNTItODg0Mi1lOTQ2ZmU4Mzc4OTMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnNhLWVhc3QtMS5hbWF6b25hd3MuY29tXC9zYS1lYXN0LTFfT1huMUNZYlRsIiwiY29nbml0bzp1c2VybmFtZSI6ImRldmVsb3BAcG9ydGFsZ2VyYS5jb20uYnIiLCJvcmlnaW5fanRpIjoiYzM5NjNkODYtMzRiNy00YzA2LWI4Y2ItNmY4OGY0NWE2MzQ5IiwiYXVkIjoiNjYycmdqdTA1bXZmajgwNmFzMmRjaWY4MWIiLCJldmVudF9pZCI6ImJiODFjOWU0LWFhYzAtNDliYi1hZjY5LTE4MWQ2M2FjMzBmOCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjUzOTM3NTU0LCJuYW1lIjoiVGVzdGVzIGVtIERldmVsb3AiLCJleHAiOjE2NTM5NDExNTQsImlhdCI6MTY1MzkzNzU1NCwiZmFtaWx5X25hbWUiOiJzYW50YW5kZXIiLCJqdGkiOiJiNWE5NmJjZS0wNjA5LTQ2NTktOGU1Zi01MmJmMjkzYWM1ODMiLCJlbWFpbCI6ImRldmVsb3BAcG9ydGFsZ2VyYS5jb20uYnIifQ.Az3qJ_B1o9FVtHbBqP0NRfi1_SxQcMl0ehk2A3I9uAzPF9bXE_Ra9RkswP1FtAMSElRX3S7vnzXbQJzAndZe3hOwE9whFLZENvPRsfWgceyyV5ffPWFhakqgzluv_dy1OysrwJdRNGyp30m3a_0Rq_bdPfFFsRuH94GIxPtj6ABHUSnSQGYtyIrX8QohkhPbtx6Uksejqf5H-uF-kBpDLEKB0O6RL0Hw9m1yGgYilV96eP6xV_UdfhgZ3aeKNCodhVJDBE0PJvekaKXYbVoiJud6jPpFst8ibluqdER_Tr5zGZp4o-nXz9rf_Gpz0J-37llPDzZ_xVQ5a8jVHqVTRw"
+							},
+							{
+								"key": "origin",
+								"value": "https://develop.portalgera.com.br"
+							},
+							{
+								"key": "referer",
+								"value": "https://develop.portalgera.com.br/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n                \"id\": \"9\"\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"name\":\"oddddl\",\r\n        \"email\":\"vicbudoddddg@gmail.com\",\r\n       \" username\":\"budoddddgnovo\",\r\n       \" password\":\"1234d5\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6bnVsbCwiZW1haWwiOiJ2aWN0b3J0ZXN0ZTJAZ21haWwuY29tIiwiaWF0IjoxNjUzMDkxMjUwfQ.vwaYwLSbn-6KUOHydOKjtHTW1VmJ4q-vYugnG191P-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-test.v2.portalgera.com.br"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJraWQiOiJEb0JyQjQ4VTV0cFR0b2lRTE1Jc2RTZzRNd3FmOG5rR041aldpcHF2UWNjPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MDIyZjI4MC03NjRkLTQzNTItODg0Mi1lOTQ2ZmU4Mzc4OTMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnNhLWVhc3QtMS5hbWF6b25hd3MuY29tXC9zYS1lYXN0LTFfT1huMUNZYlRsIiwiY29nbml0bzp1c2VybmFtZSI6ImRldmVsb3BAcG9ydGFsZ2VyYS5jb20uYnIiLCJvcmlnaW5fanRpIjoiYzM5NjNkODYtMzRiNy00YzA2LWI4Y2ItNmY4OGY0NWE2MzQ5IiwiYXVkIjoiNjYycmdqdTA1bXZmajgwNmFzMmRjaWY4MWIiLCJldmVudF9pZCI6ImJiODFjOWU0LWFhYzAtNDliYi1hZjY5LTE4MWQ2M2FjMzBmOCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjUzOTM3NTU0LCJuYW1lIjoiVGVzdGVzIGVtIERldmVsb3AiLCJleHAiOjE2NTM5NDExNTQsImlhdCI6MTY1MzkzNzU1NCwiZmFtaWx5X25hbWUiOiJzYW50YW5kZXIiLCJqdGkiOiJiNWE5NmJjZS0wNjA5LTQ2NTktOGU1Zi01MmJmMjkzYWM1ODMiLCJlbWFpbCI6ImRldmVsb3BAcG9ydGFsZ2VyYS5jb20uYnIifQ.Az3qJ_B1o9FVtHbBqP0NRfi1_SxQcMl0ehk2A3I9uAzPF9bXE_Ra9RkswP1FtAMSElRX3S7vnzXbQJzAndZe3hOwE9whFLZENvPRsfWgceyyV5ffPWFhakqgzluv_dy1OysrwJdRNGyp30m3a_0Rq_bdPfFFsRuH94GIxPtj6ABHUSnSQGYtyIrX8QohkhPbtx6Uksejqf5H-uF-kBpDLEKB0O6RL0Hw9m1yGgYilV96eP6xV_UdfhgZ3aeKNCodhVJDBE0PJvekaKXYbVoiJud6jPpFst8ibluqdER_Tr5zGZp4o-nXz9rf_Gpz0J-37llPDzZ_xVQ5a8jVHqVTRw"
+							},
+							{
+								"key": "origin",
+								"value": "https://develop.portalgera.com.br"
+							},
+							{
+								"key": "referer",
+								"value": "https://develop.portalgera.com.br/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"email\": \"BANCO3@BANCO.COM.BR\"\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": " http://localhost:5000/posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InZpY3RvciIsImVtYWlsIjoidmljdG9yY3NpbHZhMjhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ2aWMiLCJpYXQiOjE2NTU2NzA3NTV9.pwa_vDryZQDxKRp-YFVfWBE4z1hFcWBK5k1O3MG0CYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"content\":\"teste\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InZpY3RvciIsImVtYWlsIjoidmljdG9yY3NpbHZhMjhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ2aWMiLCJpYXQiOjE2NTU2NzA3NTV9.pwa_vDryZQDxKRp-YFVfWBE4z1hFcWBK5k1O3MG0CYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"content\":\"teste\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InZpY3RvciIsImVtYWlsIjoidmljdG9yY3NpbHZhMjhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ2aWMiLCJpYXQiOjE2NTU2NzA3NTV9.pwa_vDryZQDxKRp-YFVfWBE4z1hFcWBK5k1O3MG0CYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"content\":\"teste\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InZpY3RvciIsImVtYWlsIjoidmljdG9yY3NpbHZhMjhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ2aWMiLCJpYXQiOjE2NTU2NzA3NTV9.pwa_vDryZQDxKRp-YFVfWBE4z1hFcWBK5k1O3MG0CYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"content\":\"teste\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/posts/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"posts",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InZpY3RvciIsImVtYWlsIjoidmljdG9yY3NpbHZhMjhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ2aWMiLCJpYXQiOjE2NTU2NzA3NTV9.pwa_vDryZQDxKRp-YFVfWBE4z1hFcWBK5k1O3MG0CYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"content\":\"teste\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/posts/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"posts",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update single  posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InZpY3RvciIsImVtYWlsIjoidmljdG9yY3NpbHZhMjhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ2aWMiLCJpYXQiOjE2NTU2NzA3NTV9.pwa_vDryZQDxKRp-YFVfWBE4z1hFcWBK5k1O3MG0CYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"3\",\r\n    \"content\":\"testedd\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/posts/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"posts",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InZpY3RvciIsImVtYWlsIjoidmljdG9yY3NpbHZhMjhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ2aWMiLCJpYXQiOjE2NTU2NzA3NTV9.pwa_vDryZQDxKRp-YFVfWBE4z1hFcWBK5k1O3MG0CYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"3\",\r\n    \"content\":\"testedd\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/posts/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"posts",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

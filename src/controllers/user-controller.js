@@ -1,4 +1,9 @@
-import { prisma } from "../helpers/utils.js";
+import {
+  comparePassword,
+  createAccessToken,
+  hashPassword,
+  prisma,
+} from "../helpers/utils.js";
 
 export const index = async (req, res) => {
   try {
@@ -7,26 +12,28 @@ export const index = async (req, res) => {
     });
     return res.send({ data: { users } });
   } catch (error) {
-    console.error("users", error);
+    console.error(error);
     res.status(500).send({ error: `Cannot fetch users` });
   }
 };
 
 export const update = async (req, reply) => {
   try {
-    const { id } = req.params;
-    const { name, email, username, password: pass } = req.body;
     // const img = req.file;
-    const updateusers = await prisma.users.update({
+    const { id } = req.params;
+    const password = await hashPassword(pass);
+    const { name, email, username } = req.body;
+    const updateusers = await prisma.user.update({
       where: { id: +id },
       data: {
         name,
         email,
         username,
+        password,
         // image_url: img.path,
       },
     });
-    return reply.status(200).send(updateusers);
+    reply.status(200).send(updateusers);
   } catch (error) {
     reply.status(500).send({ error: "Erro no servidor" });
   }
@@ -35,7 +42,7 @@ export const update = async (req, reply) => {
 export const Delete = async (req, reply) => {
   try {
     const { id } = req.params;
-    const deleteusers = await prisma.users.delete({
+    const deleteusers = await prisma.user.delete({
       where: { id: +id },
     });
     return reply.status(200).send(deleteusers);

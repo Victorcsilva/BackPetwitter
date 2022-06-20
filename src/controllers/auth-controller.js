@@ -20,9 +20,8 @@ export const signup = async (req, reply) => {
       },
     });
 
-    reply.send(user);
+    return reply.status(200).send(user);
   } catch (error) {
-    console.log(error);
     reply.status(400).send({ error: `Esse usuario já existe` });
   }
 };

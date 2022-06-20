@@ -3,7 +3,8 @@ import { prisma } from "../helpers/utils.js";
 export const createposts = async (req, reply) => {
   const { content } = req.body;
   const { id } = req.user;
-
+  console.log(content);
+  console.log(id);
   try {
     const posts = await prisma.posts.create({
       data: {
@@ -62,16 +63,13 @@ export const Delete = async (req, reply) => {
 };
 
 export const FindPosts = async (req, reply) => {
-  const { id } = req.params;
-  const { take, skip } = req.query;
-  let data = {
-    where: { authorId: Number(id) },
-    orderBy: { id: "desc" },
-  };
-  if (take) data.take = Number(take);
-  if (skip) data.skip = Number(skip);
   try {
-    const findposts = await prisma.posts.findMany(data);
+    const { id } = req.params;
+    const findposts = await prisma.posts.findMany({
+      where: { authorId: Number(id) },
+      orderBy: { id: "desc" },
+      take: 7,
+    });
     return reply.status(200).send(findposts);
   } catch (error) {
     reply.status(500).send({ error: "Erro ao encontrar Petwitter" });

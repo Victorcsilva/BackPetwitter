@@ -16,7 +16,7 @@ export default {
     handler: PostsController.index,
   },
 
-  getAllposts: {
+  getAllpostsid: {
     method: "GET",
     url: "/posts/:id",
     preHandler: [validateRequest],
